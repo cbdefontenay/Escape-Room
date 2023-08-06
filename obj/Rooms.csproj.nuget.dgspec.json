@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj": {}
+    "C:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj": {}
   },
   "projects": {
-    "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj": {
+    "C:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
+        "projectUniqueName": "C:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
         "projectName": "Rooms",
-        "projectPath": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
+        "projectPath": "C:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
         "packagesPath": "C:\\Users\\cbdef\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\obj\\",
+        "outputPath": "C:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

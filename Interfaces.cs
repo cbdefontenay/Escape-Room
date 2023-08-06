@@ -7,7 +7,13 @@ namespace Escape
         void FirstRoom();
         void BlueRoom();
         string TreeRoom();
-        string FightGuard(string path);
+    }
+
+    //Interface fights
+    interface IFights
+    {
+
+        string FightGuards(string path);
         string DetermineFightOutcome(string userAttack, string guardAttack);
     }
 

@@ -8,6 +8,7 @@ namespace Escape
         private string _userName;
         Map map = new Map();
         Tips tips = new Tips();
+        FightGuard fightGuard = new FightGuard();
 
         public Room(string userName)
         {
@@ -141,11 +142,11 @@ namespace Escape
                 switch (userChoice)
                 {
                     case "l":
-                        result = FightGuard("left");
+                        result = fightGuard.FightGuards("left");
                         break;
 
                     case "r":
-                        result = FightGuard("right");
+                        result = fightGuard.FightGuards("right");
                         break;
 
                     default:
@@ -155,56 +156,6 @@ namespace Escape
             } while (userChoice != "l" && userChoice != "r");
 
             return result;
-        }
-
-
-        public string FightGuard(string path)
-        {
-            string[] attackOptions = { "slash", "stab", "block", "dodge" };
-            Random random = new Random();
-
-            string guardAttack = attackOptions[random.Next(attackOptions.Length)];
-            string userAttack;
-
-            do
-            {
-                Console.WriteLine($"A guard appears on the {path} path!");
-
-                Console.WriteLine("Choose your attack: slash, stab, block, dodge");
-                Console.Write(">> ");
-                userAttack = Console.ReadLine().ToLower();
-
-                if (Array.IndexOf(attackOptions, userAttack) == -1)
-                {
-                    Console.WriteLine("Invalid attack option. Try again.\n");
-                }
-            } while (Array.IndexOf(attackOptions, userAttack) == -1);
-
-            Console.WriteLine($"You chose '{userAttack}' and the guard chose '{guardAttack}'.");
-
-            // Implement logic to determine the outcome of the fight
-            string fightResult = DetermineFightOutcome(userAttack, guardAttack);
-
-            return fightResult;
-        }
-
-        public string DetermineFightOutcome(string userAttack, string guardAttack)
-        {
-            if (userAttack == guardAttack)
-            {
-                return "The fight ends in a draw.";
-            }
-            else if ((userAttack == "slash" && guardAttack == "stab") ||
-                     (userAttack == "stab" && guardAttack == "block") ||
-                     (userAttack == "block" && guardAttack == "dodge") ||
-                     (userAttack == "dodge" && guardAttack == "slash"))
-            {
-                return "You win the fight!";
-            }
-            else
-            {
-                return "The guard wins the fight.";
-            }
         }
     }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C4OSbXBMzdXBUnbm2bETEc1q6i8QVjyG0KjCFKBOM833NOyM1kyZjd6Z3EVaGZ7WdqlB098EwaaUAytMer+0Ew==",
+  "dgSpecHash": "XsER1oMskCIwjfSx6mWZCIgFk9sHc81qOdrot1cLzgZAChB7lv2Rlpg9rMjU/9T7mnYgO7v0cN5lWvKxvIYTwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cbdef\\Desktop\\.NET\\Rooms\\Rooms.csproj",
+  "projectFilePath": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cbdef\\Desktop\\.NET\\Rooms\\Rooms.csproj",
+      "projectUniqueName": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
       "projectName": "Rooms",
-      "projectPath": "C:\\Users\\cbdef\\Desktop\\.NET\\Rooms\\Rooms.csproj",
+      "projectPath": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\Rooms.csproj",
       "packagesPath": "C:\\Users\\cbdef\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cbdef\\Desktop\\.NET\\Rooms\\obj\\",
+      "outputPath": "c:\\Users\\cbdef\\Desktop\\.NET\\Escape-Room\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -47,10 +47,25 @@ namespace Escape
             {
                 return "You win the fight!";
             }
+            else if ((userAttack == "slash" && guardAttack == "dodge") ||
+                     (userAttack == "stab" && guardAttack == "slash") ||
+                     (userAttack == "block" && guardAttack == "stab") ||
+                     (userAttack == "dodge" && guardAttack == "block"))
+            {
+                return "The guard dodged your attack and counterattacked!";
+            }
+            else if ((userAttack == "slash" && guardAttack == "block") ||
+                     (userAttack == "stab" && guardAttack == "dodge") ||
+                     (userAttack == "block" && guardAttack == "slash") ||
+                     (userAttack == "dodge" && guardAttack == "stab"))
+            {
+                return "The guard blocked your attack and is preparing to strike back!";
+            }
             else
             {
                 return "The guard wins the fight.";
             }
         }
+
     }
 }

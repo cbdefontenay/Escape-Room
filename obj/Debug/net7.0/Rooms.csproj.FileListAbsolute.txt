@@ -1,0 +1,15 @@
+C:\Users\cbdef\Desktop\.NET\Rooms\bin\Debug\net7.0\Rooms.exe
+C:\Users\cbdef\Desktop\.NET\Rooms\bin\Debug\net7.0\Rooms.deps.json
+C:\Users\cbdef\Desktop\.NET\Rooms\bin\Debug\net7.0\Rooms.runtimeconfig.json
+C:\Users\cbdef\Desktop\.NET\Rooms\bin\Debug\net7.0\Rooms.dll
+C:\Users\cbdef\Desktop\.NET\Rooms\bin\Debug\net7.0\Rooms.pdb
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.csproj.AssemblyReference.cache
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.AssemblyInfoInputs.cache
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.AssemblyInfo.cs
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.csproj.CoreCompileInputs.cache
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.dll
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\refint\Rooms.dll
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.pdb
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\Rooms.genruntimeconfig.cache
+C:\Users\cbdef\Desktop\.NET\Rooms\obj\Debug\net7.0\ref\Rooms.dll

@@ -19,10 +19,8 @@ namespace Escape
         {
             Console.WriteLine($"Welcome {_userName} to the great escape game ever created.");
             Thread.Sleep(1000);
-            string userName = Console.ReadLine();
 
-            Thread.Sleep(1000);
-            Console.WriteLine($"You're now called: '{userName}'!\n");
+            Console.WriteLine($"You're now called: '{_userName}'!\n");
             Console.WriteLine("Let's start!\n");
             Console.WriteLine("You have been challenged to manage to get out of the building you are currently in.\n");
             Console.WriteLine("To start, you will have to solve a challenge. To do so, type 'start'.\n");

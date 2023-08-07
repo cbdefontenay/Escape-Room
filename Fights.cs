@@ -30,7 +30,7 @@ namespace Escape
 
             // Implement logic to determine the outcome of the fight
             string fightResult = DetermineFightOutcome(userAttack, guardAttack);
-
+            Console.WriteLine(fightResult); // display the fight result
             return fightResult;
         }
 

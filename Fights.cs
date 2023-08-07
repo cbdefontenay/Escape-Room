@@ -4,18 +4,24 @@ namespace Escape
     {
         Map map = new Map();
 
-        public string FightGuards(string path)
+        public string FightGuards(string path, string firstAttack, string secondAttack, string thirdAttack, string fourthAttack)
         {
-            string[] attackOptions = { "slash", "stab", "block", "dodge" };
+            string[] attackOptions = { $"{firstAttack}, {secondAttack}, {thirdAttack}, {fourthAttack}" };
             Random random = new Random();
 
             string guardAttack = attackOptions[random.Next(attackOptions.Length)];
             string userAttack;
+            bool guardCounterattack = false;
+
+            Console.WriteLine($"The guard appears on the {path} path!\n");
+            Console.WriteLine("He gives you a sword. You have to fight him!\n");
 
             do
             {
-                Console.WriteLine($"The guard appears on the {path} path!\n");
-                Console.WriteLine("He gives you a sword. You have to fight him!\n");
+                if (guardCounterattack)
+                {
+                    Console.WriteLine("The guard is countering your attack!\n");
+                }
 
                 Console.WriteLine("Choose your attack: slash, stab, block, dodge");
 
@@ -26,19 +32,50 @@ namespace Escape
                 {
                     Console.WriteLine("Invalid attack option. Try again.\n");
                 }
-            } while (Array.IndexOf(attackOptions, userAttack) == -1);
+                else if (guardCounterattack && (userAttack == "block" || userAttack == "dodge"))
+                {
+                    Console.WriteLine("You can't block or dodge during the guard's counterattack!\n");
+                }
+            } while (Array.IndexOf(attackOptions, userAttack) == -1 || (guardCounterattack && (userAttack == "block" || userAttack == "dodge")));
+
 
             Console.WriteLine($"You chose '{userAttack}' and the guard chose '{guardAttack}'.");
 
             // Implement logic to determine the outcome of the fight
             string fightResult = DetermineFightOutcome(userAttack, guardAttack);
             Console.WriteLine(fightResult); // display the fight result
+
+            // Check if the guard countered the user's attack
+            guardCounterattack = fightResult == "\nThe guard dodged your attack and counterattacked!" || fightResult == "\nThe guard blocked your attack and is preparing to strike back!";
+
+            // If the user lost, they have to choose their attack again
+            while (fightResult == "\nThe guard dodged your attack and counterattacked!" || fightResult == "\nThe guard blocked your attack and is preparing to strike back!")
+            {
+                Console.WriteLine("\nThe guard counters your attack! \nChoose your attack: slash, stab, block, dodge");
+                Console.Write(">> ");
+                userAttack = Console.ReadLine().ToLower();
+
+                if (Array.IndexOf(attackOptions, userAttack) == -1)
+                {
+                    Console.WriteLine("Invalid attack option. Try again.\n");
+                }
+                else if (guardCounterattack && (userAttack == "block" || userAttack == "dodge"))
+                {
+                    Console.WriteLine("You can't block or dodge during the guard's counterattack!\n");
+                }
+
+                Console.WriteLine($"You chose '{userAttack}' and the guard chose '{guardAttack}'.");
+                fightResult = DetermineFightOutcome(userAttack, guardAttack);
+                Console.WriteLine(fightResult); // display the fight result
+                guardCounterattack = fightResult == "The guard dodged your attack and counterattacked!" || fightResult == "The guard blocked your attack and is preparing to strike back!";
+            }
+
             return fightResult;
         }
 
         public string DetermineFightOutcome(string userAttack, string guardAttack)
         {
-            map.Arms();
+            map.Weapons();
 
             if (userAttack == guardAttack)
             {
@@ -70,6 +107,5 @@ namespace Escape
                 return "The guard wins the fight.";
             }
         }
-
     }
 }

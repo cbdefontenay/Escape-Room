@@ -55,7 +55,7 @@ namespace Escape
             Console.WriteLine("          ||                || /");
         }
 
-        public void Arms()
+        public void Weapons()
         {
             Console.WriteLine("          Sword              Axe");
             Console.WriteLine("       /\\                /\\");
@@ -66,6 +66,24 @@ namespace Escape
             Console.WriteLine("   |/ \\_|______________|_/ \\|");
             Console.WriteLine("    \\ |/             \\| /");
             Console.WriteLine("     \\|               |/ ");
+
+        }
+        public void Fish()
+        {
+            Console.WriteLine("><(((º>");
+        }
+
+        public void SeaTurtle()
+        {
+            Console.WriteLine("                 ___");
+            Console.WriteLine("                /  /\\");
+            Console.WriteLine("               /  /::\\");
+            Console.WriteLine("              /  /:/\\:\\");
+            Console.WriteLine("             /  /:/~/::\\");
+            Console.WriteLine("            /__/:/ /:/\\:\\");
+            Console.WriteLine("            \\  \\:\\/:/__\\/");
+            Console.WriteLine("             \\  \\::/");
+            Console.WriteLine("              \\__\\/");
 
         }
     }

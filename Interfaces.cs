@@ -7,13 +7,14 @@ namespace Escape
         void FirstRoom();
         void BlueRoom();
         string TreeRoom();
+        void SeaAnimalRoom();
     }
 
     //Interface fights
     interface IFights
     {
 
-        string FightGuards(string path);
+        string FightGuards(string path, string firstAttack, string secondAttack, string thirdAttack, string fourthAttack);
         string DetermineFightOutcome(string userAttack, string guardAttack);
     }
 
@@ -24,7 +25,9 @@ namespace Escape
         void OldMan();
         void Tree();
         void Guards();
-        void Arms();
+        void Weapons();
+        void Fish();
+        void SeaTurtle();
     }
 
     //Interface for Tips

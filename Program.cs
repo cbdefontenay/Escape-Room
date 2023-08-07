@@ -12,7 +12,7 @@ namespace Escape
             var room = new Room(userName);
             room.UserName();
             room.TreeRoom();
-            
+            room.SeaAnimalRoom();
         }
     }
 }

@@ -2,6 +2,8 @@ namespace Escape
 {
     public class FightGuard : IFights
     {
+        Map map = new Map();
+
         public string FightGuards(string path)
         {
             string[] attackOptions = { "slash", "stab", "block", "dodge" };
@@ -36,6 +38,8 @@ namespace Escape
 
         public string DetermineFightOutcome(string userAttack, string guardAttack)
         {
+            map.Arms();
+
             if (userAttack == guardAttack)
             {
                 return "The fight ends in a draw.";

@@ -24,6 +24,7 @@ namespace Escape
         void OldMan();
         void Tree();
         void Guards();
+        void Arms();
     }
 
     //Interface for Tips

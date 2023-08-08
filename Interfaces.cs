@@ -14,8 +14,15 @@ namespace Escape
     interface IFights
     {
 
-        string FightGuards(string path, string firstAttack, string secondAttack, string thirdAttack, string fourthAttack);
+        string FightGuards(string path);
         string DetermineFightOutcome(string userAttack, string guardAttack);
+    }
+
+    //Interface for Animals
+    interface IAnimals
+    {
+        void AnimalChoice();
+        void AskQuizQuestion(string chosenAnimal);
     }
 
     // Interface for Drawing

@@ -4,20 +4,20 @@ namespace Escape
     {
         Map map = new Map();
 
-        public string FightGuards(string path, string firstAttack, string secondAttack, string thirdAttack, string fourthAttack)
+        public string FightGuards(string path)
         {
-            string[] attackOptions = { $"{firstAttack}, {secondAttack}, {thirdAttack}, {fourthAttack}" };
+            string[] attackOptions = { "slash", "stab", "block", "dodge" };
             Random random = new Random();
 
             string guardAttack = attackOptions[random.Next(attackOptions.Length)];
             string userAttack;
             bool guardCounterattack = false;
 
-            Console.WriteLine($"The guard appears on the {path} path!\n");
-            Console.WriteLine("He gives you a sword. You have to fight him!\n");
-
             do
             {
+                Console.WriteLine($"The guard appears on the {path} path!\n");
+                Console.WriteLine("He gives you a sword. You have to fight him!\n");
+
                 if (guardCounterattack)
                 {
                     Console.WriteLine("The guard is countering your attack!\n");
@@ -38,7 +38,6 @@ namespace Escape
                 }
             } while (Array.IndexOf(attackOptions, userAttack) == -1 || (guardCounterattack && (userAttack == "block" || userAttack == "dodge")));
 
-
             Console.WriteLine($"You chose '{userAttack}' and the guard chose '{guardAttack}'.");
 
             // Implement logic to determine the outcome of the fight
@@ -46,12 +45,12 @@ namespace Escape
             Console.WriteLine(fightResult); // display the fight result
 
             // Check if the guard countered the user's attack
-            guardCounterattack = fightResult == "\nThe guard dodged your attack and counterattacked!" || fightResult == "\nThe guard blocked your attack and is preparing to strike back!";
+            guardCounterattack = fightResult == "The guard dodged your attack and counterattacked!" || fightResult == "The guard blocked your attack and is preparing to strike back!";
 
             // If the user lost, they have to choose their attack again
-            while (fightResult == "\nThe guard dodged your attack and counterattacked!" || fightResult == "\nThe guard blocked your attack and is preparing to strike back!")
+            while (fightResult == "The guard dodged your attack and counterattacked!" || fightResult == "The guard blocked your attack and is preparing to strike back!")
             {
-                Console.WriteLine("\nThe guard counters your attack! \nChoose your attack: slash, stab, block, dodge");
+                Console.WriteLine("The guard counters your attack! Choose your attack: slash, stab, block, dodge");
                 Console.Write(">> ");
                 userAttack = Console.ReadLine().ToLower();
 

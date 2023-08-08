@@ -9,6 +9,7 @@ namespace Escape
         Map map = new Map();
         Tips tips = new Tips();
         FightGuard fightGuard = new FightGuard();
+        AnimalRoom animalRoom = new AnimalRoom();
 
         public Room(string userName)
         {
@@ -142,11 +143,11 @@ namespace Escape
                 switch (userChoice)
                 {
                     case "l":
-                        result = fightGuard.FightGuards("left", "slash", "stab", "block", "dodge");
+                        result = fightGuard.FightGuards("left");
                         break;
 
                     case "r":
-                        result = fightGuard.FightGuards("right", "slash", "stab", "block", "dodge");
+                        result = fightGuard.FightGuards("right");
                         break;
 
                     default:
@@ -160,31 +161,7 @@ namespace Escape
 
         public void SeaAnimalRoom()
         {
-            List<string> seaAnimals = new List<string> { "Fish", "Sea Turtle" };
-
-            Console.WriteLine("Welcome to the Sea Animal Room! Choose a sea animal:");
-
-            for (int i = 0; i < seaAnimals.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}. {seaAnimals[i]}");
-            }
-
-            int userChoice;
-
-            while (true)
-            {
-                Console.Write(">> ");
-                if (int.TryParse(Console.ReadLine(), out userChoice) && userChoice >= 1 && userChoice <= seaAnimals.Count)
-                {
-                    string chosenAnimal = seaAnimals[userChoice - 1];
-                    Console.WriteLine($"You chose {chosenAnimal}! Something happens...");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice. Try again.");
-                }
-            }
+            animalRoom.AnimalChoice();
         }
     }
 }
